@@ -11,7 +11,7 @@ A great way to put the skills learned in CPSC 233 to use by developing in Java i
 
 # Tech/framework used
 
-Built with [Android Studio](https://www.google.com)  
+Built with [Android Studio](https://developer.android.com/studio)  
 Built using JRE version 1.8.0  
 Built using Gradle Version 6.1.1  
 Built using Android Grade Plugin Version 4.0.1 
