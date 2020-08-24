@@ -55,8 +55,17 @@ public class PaintView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
+        // mX is the position X on the screen
+        // mY is the position Y on the screen
         float mX = event.getX();
         float mY = event.getY();
+
+        // ACTION_DOWN is when the user first touches the screen, then the graphics path moves to the x and y location of the screen
+        // ACTION_MOVE (From developer.android.com/reference/android/view/MotionEvent
+        // Constant for getActionMasked(): A change has happened during a press gesture (between ACTION_DOWN and ACTION_UP).
+        // The motion contains the most recent point, as well as any intermediate points since the last down or move event.
+
+        // We return false for the action as a default since no action is a default
 
         switch(event.getAction()) {
             case MotionEvent.ACTION_DOWN:
