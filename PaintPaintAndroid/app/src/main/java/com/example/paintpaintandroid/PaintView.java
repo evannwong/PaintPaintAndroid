@@ -11,6 +11,12 @@ import android.view.ViewGroup;
 
 public class PaintView extends View {
 
+    /*
+    ViewGroup.LayoutParams are used by views to tell their parents how they want to be laid out. Basically,
+    it allows the view to be as big as the parent, or wrap_content which means that the view just wants to be big enough
+    to close its content.
+    */
+
     public ViewGroup.LayoutParams params;
     private Path path = new Path();
     private Paint brush = new Paint();
