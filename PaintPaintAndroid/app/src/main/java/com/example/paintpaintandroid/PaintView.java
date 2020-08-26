@@ -90,6 +90,7 @@ public class PaintView extends View {
                 return false;
         }
 
+        // postInvalidate() gets called, this means that View gets redrawn in the next eventloop on the UIThread
         postInvalidate();
         return false;
     }
