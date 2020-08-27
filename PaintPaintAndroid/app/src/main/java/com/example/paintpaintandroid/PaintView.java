@@ -11,6 +11,12 @@ import android.view.ViewGroup;
 
 public class PaintView extends View {
 
+    /*
+    ViewGroup.LayoutParams are used by views to tell their parents how they want to be laid out. Basically,
+    it allows the view to be as big as the parent, or wrap_content which means that the view just wants to be big enough
+    to close its content.
+    */
+
     public ViewGroup.LayoutParams params;
     private Path path = new Path();
     private Paint brush = new Paint();
@@ -24,6 +30,10 @@ public class PaintView extends View {
 
         brush.setAntiAlias(booleanValue) allows the smoothing of edges
         brush.setColor(Color.COLOR) allows the brush to be a certain color
+
+        For color, you can set it with rgb using argb(int alpha, int red, int green, int blue)
+        In argb, alpha represents the transparency value (default is 255 for opaque)
+
         brush.setStyle(Paint.Style.STYLE) allows the brush to either be stroke, fill, etc
         brush.setStrokeJoin(Paint.Join.STRING) allows the brush to have three functions
         1.) BEVEL allows the outer edges of a join to meet with a straight line
@@ -32,7 +42,7 @@ public class PaintView extends View {
         brush.setStrokeWidth(INT) allows the brush to be a certain width
         */
         brush.setAntiAlias(true);
-        brush.setColor(Color.BLACK);
+        brush.setColor(Color.argb(255,6,12,11));
         brush.setStyle(Paint.Style.STROKE);
         brush.setStrokeJoin(Paint.Join.ROUND);
         brush.setStrokeWidth(8);
@@ -80,6 +90,7 @@ public class PaintView extends View {
                 return false;
         }
 
+        // postInvalidate() gets called, this means that View gets redrawn in the next eventloop on the UIThread
         postInvalidate();
         return false;
     }
