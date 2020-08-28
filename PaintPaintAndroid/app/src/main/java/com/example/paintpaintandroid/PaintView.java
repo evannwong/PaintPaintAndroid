@@ -45,7 +45,7 @@ public class PaintView extends View {
         brush.setColor(Color.argb(255,6,12,11));
         brush.setStyle(Paint.Style.STROKE);
         brush.setStrokeJoin(Paint.Join.ROUND);
-        brush.setStrokeWidth(8);
+        brush.setStrokeWidth(400);
 
         // As taken from https://developer.android.com/reference/android/view/ViewGroup.LayoutParams
         /*
@@ -94,6 +94,28 @@ public class PaintView extends View {
         postInvalidate();
         return false;
     }
+
+    // Sets the brush size of the paintbrush
+    public void setBrushSize(int brushSize) {
+       brush.setStrokeWidth(brushSize);
+    }
+
+    // Sets the brush color of the paintbrush using rgb values
+    public void setBrushColor(int alpha, int r, int g, int b) {
+        brush.setColor(Color.argb(alpha,r,g,b));
+    }
+
+    // Getter for getting the brush color
+    public int getColor() {
+        return brush.getColor();
+    }
+
+    // Getter for getting the stroke width
+    public int getStrokeWidth() {
+        return (int) brush.getStrokeWidth();
+    }
+
+
 
     @Override
     protected void onDraw(Canvas canvas) {
