@@ -13,6 +13,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -58,4 +60,22 @@ public class PaintView extends View {
     private ArrayList<Draw> undo = new ArrayList<>();
 
 
+    // AUTO generated constructors
+    public PaintView(Context context) {
+        super(context);
+    }
+
+    public PaintView(Context context, @Nullable AttributeSet attrs) {
+        super(context, attrs);
+
+        mPaint = new Paint();
+        mPaint.setAntiAlias(true);
+        mPaint.setDither(true);
+        mPaint.setColor(defaultColor);
+        mPaint.setStyle(Paint.Style.STROKE);
+        mPaint.setStrokeJoin(Paint.Join.ROUND);
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
+        mPaint.setXfermode(null);
+        mPaint.setAlpha(0xff);
+    }
 }
