@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/undoButton"
+        app:showAsAction="never"
+        android:title="@string/undo" />
+    <item
+        android:id="@+id/redoButton"
+        app:showAsAction="never"
+        android:title="@string/redo" />
+    <item
+        android:id="@+id/saveButton"
+        app:showAsAction="never"
+        android:title="@string/save" />
+    <item
+        android:id="@+id/clearButton"
+        app:showAsAction="never"
+        android:title="@string/clear" />
+
+</menu>

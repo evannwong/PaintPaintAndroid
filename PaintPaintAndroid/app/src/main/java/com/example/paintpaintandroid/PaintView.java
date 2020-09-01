@@ -51,7 +51,7 @@ public class PaintView extends View {
     private Paint mPaint;
     private int currentColor;
     private int backgroundColor = defaultBackGroundColor;
-    private int strokeWidth;
+    public int strokeWidth;
     private Bitmap mBitmap;
     private Canvas mCanvas;
     private Paint mBitmapPaint = new Paint(Paint.DITHER_FLAG);
@@ -62,7 +62,7 @@ public class PaintView extends View {
 
     // AUTO generated constructors
     public PaintView(Context context) {
-        super(context);
+        super(context, null);
     }
 
     public PaintView(Context context, @Nullable AttributeSet attrs) {
@@ -96,11 +96,11 @@ public class PaintView extends View {
     protected void onDraw(Canvas canvas) {
 
         canvas.save();
-        mCanvas.drawColor(defaultColor);
+        mCanvas.drawColor(backgroundColor);
 
         for (Draw draw : paths) {
-            mPaint.setColor(defaultColor);
-            mPaint.setStrokeWidth(strokeWidth);
+            mPaint.setColor(draw.color);
+            mPaint.setStrokeWidth(draw.strokeWidth);
             mPaint.setMaskFilter(null);
 
             mCanvas.drawPath(draw.getPath(), mPaint);
@@ -190,6 +190,7 @@ public class PaintView extends View {
         if (paths.size() > 0) {
 
             undo.add(paths.remove(paths.size() - 1));
+            invalidate();
 
         } else {
 
@@ -204,10 +205,11 @@ public class PaintView extends View {
         if (undo.size() > 0) {
 
             paths.add(undo.remove(undo.size() - 1));
+            invalidate();
 
         } else {
 
-            Toast.makeText(getContext(), "Nothing to undo", Toast.LENGTH_LONG).show();
+            Toast.makeText(getContext(), "Nothing to redo", Toast.LENGTH_LONG).show();
 
         }
 

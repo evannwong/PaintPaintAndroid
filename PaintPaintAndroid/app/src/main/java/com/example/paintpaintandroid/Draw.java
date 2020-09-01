@@ -4,11 +4,11 @@ import android.graphics.Path;
 
 public class Draw {
 
-    private int color;
-    private int strokeWidth;
-    private Path path;
+    public int color;
+    public int strokeWidth;
+    public Path path;
 
-    public Draw(int color, int StrokeWidth, Path path) {
+    public Draw(int color, int strokeWidth, Path path) {
 
         this.color = color;
         this.strokeWidth = strokeWidth;
