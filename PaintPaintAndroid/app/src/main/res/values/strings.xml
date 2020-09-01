@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">PaintPaintAndroid</string>
-    <string name="brush_size">Brush Size:</string>
-    <string name="color">Color</string>
-    <string name="undo">Undo</string>
-    <string name="redo">Redo</string>
-    <string name="save">Save</string>
-    <string name="clear">Clear</string>
-</resources>
