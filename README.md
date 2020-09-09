@@ -23,16 +23,12 @@ An APK will be released once the application is nearing the final stages of comp
 In the meantime, you are free to install android studio using the link provided above, and clone this repository and run it. 
 
 # Features to implement
-A functioning color wheel that uses RGB  
-A brush slider that changes the size  
-Selection of brush types (Paint, Pencil, etc)  
-Eraser  
-A image save feature that saves the user's image into a jpeg  
+Eraser
 
 # Features that have been implemented
-Basic drawing with a paintbrush
+All basic functionalies including variable brush size and a RGB color pallete. Saving has an issue so therefore it still needs debugging 
 
 # Credits
 Collaboration effort Between Jason Jiang and Evan Wong  
 Find Evan Wong's github [here](https://github.com/evannwong)  
-Tutorial used [here](https://www.youtube.com/watch?v=r8zAQTa2rfE&t=489s), thank you Alan Ranjoni  
+Tutorial used [here](https://www.youtube.com/watch?v=LqJko2Ln86E), thank you Dan Stoakes 
