@@ -31,4 +31,3 @@ All basic functionalies including variable brush size and a RGB color pallete. S
 # Credits
 Collaboration effort Between Jason Jiang and Evan Wong  
 Find Evan Wong's github [here](https://github.com/evannwong)  
-Tutorial used [here](https://www.youtube.com/watch?v=LqJko2Ln86E), thank you Dan Stoakes 
